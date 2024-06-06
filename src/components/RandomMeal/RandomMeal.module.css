@@ -18,12 +18,22 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  font-size: 1.4rem;
 }
 
-.random_meal__info h2 {
+.random_meal__info_link {
   color: goldenrod;
   text-decoration: none;
   cursor: pointer;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.random_meal__info_link:hover {
+  text-decoration: underline;
+  text-decoration-color: goldenrod;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .random_meal__img img {
