@@ -1,0 +1,138 @@
+.meal_details {
+  padding: 2rem;
+  width: 100%;
+}
+
+.meal_details__info_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.meal_details__info,
+.meal_details__img {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.meal_details__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.meal_details__info h2 {
+  color: goldenrod;
+  text-decoration: none;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.meal_details__img img {
+  border-radius: 0.5rem;
+  box-shadow: 0.625rem 0.75rem 1.875rem -1rem rgba(0, 0, 0, 0.75);
+  object-fit: cover;
+  width: 70%;
+}
+
+.meal_details__meta {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.ingredients {
+  align-self: flex-start;
+}
+
+.ingredients h5 {
+  text-align: left;
+  padding: 0.8rem 0;
+}
+
+.ingredients ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+.ingredients ul li {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.instructions {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.instructions h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.instructions ul {
+  text-align: left;
+  list-style: none;
+}
+
+.instructions ul li {
+  margin: 0.8rem 0;
+  font-size: 1.2rem;
+}
+
+.btns {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.youtube_button {
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.youtube_button:hover {
+  background-color: darkgoldenrod;
+}
+
+.go_back_button {
+  background-color: #dcdcdc;
+  color: goldenrod;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.go_back_button:hover {
+  background-color: #aeaeae;
+}
+
+@media (min-width: 768px) {
+  .mealDetails {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .mealDetails__info,
+  .mealDetails__img {
+    width: 50%;
+  }
+}

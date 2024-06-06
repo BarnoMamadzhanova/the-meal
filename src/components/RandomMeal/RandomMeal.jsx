@@ -13,7 +13,6 @@ function RandomMeal() {
       url: url,
     })
       .then((response) => {
-        console.log(response.data);
         setMeal(response.data.meals[0]);
       })
       .catch((error) => {
