@@ -9,9 +9,6 @@ function Header() {
         <NavLink to="/" className={classes.header__link}>
           Home
         </NavLink>
-        <NavLink to="/details" className={classes.header__link}>
-          Details
-        </NavLink>
       </header>
     </>
   );
