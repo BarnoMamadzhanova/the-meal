@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import classes from "./MealDetails.module.css";
 
 function MealDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
   const [meal, setMeal] = useState(null);
+
+  const goBack = () => navigate(-1);
 
   // Fetching data
   useEffect(() => {
@@ -76,15 +79,18 @@ function MealDetails() {
 
           {meal.strYoutube && (
             <div className={classes.btns}>
-              <a
-                href={meal.strYoutube}
+              <button onClick={goBack} className={classes.go_back_button}>
+                Go back
+              </button>
+              <Link
+                to={meal.strYoutube}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <button className={classes.youtube_button}>
                   Watch on YouTube
                 </button>
-              </a>
+              </Link>
             </div>
           )}
         </>
