@@ -1,9 +1,10 @@
 import React from "react";
+import RandomMeal from "../components/RandomMeal/RandomMeal";
 
 function HomePage() {
   return (
     <div>
-      <h3>Home page</h3>
+      <RandomMeal />
     </div>
   );
 }
