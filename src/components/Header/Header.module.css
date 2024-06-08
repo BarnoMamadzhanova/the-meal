@@ -19,5 +19,6 @@
   text-decoration: underline;
   text-decoration-color: white;
   text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
+  transition: all 0.15s;
 }
