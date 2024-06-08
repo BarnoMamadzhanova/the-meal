@@ -22,7 +22,7 @@ function MealDetails() {
       .catch((error) => {
         console.log(error);
       });
-  }, [id]);
+  }, []);
 
   // Function to get ingredients and measures
   const getIngredients = (meal) => {
@@ -52,18 +52,19 @@ function MealDetails() {
               <div className={classes.meal_details__meta}>
                 <span>{meal.strCategory}</span> | <span>{meal.strArea}</span>
               </div>
-              <div className={classes.ingredients}>
-                <h5>Ingredients</h5>
-                <ul>
-                  {getIngredients(meal).map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
-                  ))}
-                </ul>
-              </div>
             </div>
             <div className={classes.meal_details__img}>
               <img src={meal.strMealThumb} alt={meal.strMeal} />
             </div>
+          </div>
+
+          <div className={classes.ingredients}>
+            <h5>Ingredients</h5>
+            <ul>
+              {getIngredients(meal).map((ingredient, index) => (
+                <li key={index}>{ingredient}</li>
+              ))}
+            </ul>
           </div>
 
           <div className={classes.instructions}>
@@ -86,10 +87,9 @@ function MealDetails() {
                 to={meal.strYoutube}
                 target="_blank"
                 rel="noopener noreferrer"
+                className={classes.youtube_button}
               >
-                <button className={classes.youtube_button}>
-                  Watch on YouTube
-                </button>
+                Watch on YouTube
               </Link>
             </div>
           )}
