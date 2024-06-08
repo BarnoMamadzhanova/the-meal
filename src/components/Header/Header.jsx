@@ -7,7 +7,7 @@ function Header() {
     <>
       <header className={classes.header}>
         <NavLink to="/" className={classes.header__link}>
-          Home
+          The Meal
         </NavLink>
       </header>
     </>

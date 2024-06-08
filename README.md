@@ -4,10 +4,10 @@ Recipe Finder is a web application designed to help users discover recipes. The 
 
 ## Table of Contents
 
-- [Features](Features)
-- [Technologies Used](Technologies Used)
-- [Installation](Installation)
-- [Usage](Usage)
+- Features
+- Technologies Used
+- Installation
+- Usage
 
 ### Features
 

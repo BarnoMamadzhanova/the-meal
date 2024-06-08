@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./styles/App.css";
 import HomePage from "./pages/HomePage";
-// import Details from "./pages/Details";
 import MealDetails from "./components/MealDetails/MealDetails";
 import Layout from "./components/Layout/Layout";
 
