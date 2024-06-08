@@ -22,18 +22,18 @@ function MealDetails() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [url]);
 
   // Function to get ingredients and measures
   const getIngredients = (meal) => {
     const ingredients = [];
-    Array.from({ length: 20 }, (_, i) => i + 1).forEach((i) => {
+    for (let i = 1; i <= 20; i++) {
       const ingredient = meal[`strIngredient${i}`];
       const measure = meal[`strMeasure${i}`];
       if (ingredient) {
         ingredients.push(`${measure} ${ingredient}`);
       }
-    });
+    }
     return ingredients;
   };
 
