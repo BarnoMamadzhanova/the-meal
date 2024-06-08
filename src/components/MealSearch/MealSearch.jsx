@@ -24,29 +24,33 @@ function MealSearch() {
   }, [searchTitle]);
 
   return (
-    <div>
+    <div className={classes.search_meal__container}>
       <Form setSearchTitle={setSearchTitle} />
-      <div className={classes.search_meal__flexbox}>
-        {searchedMeals && searchedMeals.length > 0
-          ? searchedMeals.map((meal) => (
-              <div key={meal.idMeal} className={classes.search_meal__info}>
-                <h3>{meal.strMeal}</h3>
-                <Link
-                  className={classes.search_meal__info_link}
-                  to={`/${meal.idMeal}`}
-                >
-                  {meal.strMeal}
-                </Link>
-                <div>
-                  <span>{meal.strCategory}</span> | <span>{meal.strArea}</span>
-                </div>
+
+      {searchedMeals && searchedMeals.length > 0
+        ? searchedMeals.map((meal) => (
+            <>
+              <div className={classes.search_meal__flexbox}>
                 <div className={classes.search_meal__img}>
                   <img src={meal.strMealThumb} alt={meal.strMeal} />
                 </div>
+                <div key={meal.idMeal} className={classes.search_meal__info}>
+                  <h3>{meal.strMeal}</h3>
+                  <Link
+                    className={classes.search_meal__info_link}
+                    to={`/${meal.idMeal}`}
+                  >
+                    {meal.strMeal}
+                  </Link>
+                  <div>
+                    <span>{meal.strCategory}</span> |{" "}
+                    <span>{meal.strArea}</span>
+                  </div>
+                </div>
               </div>
-            ))
-          : ""}
-      </div>
+            </>
+          ))
+        : ""}
     </div>
   );
 }
