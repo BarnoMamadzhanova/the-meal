@@ -37,7 +37,9 @@ function RandomMeal() {
             </div>
           </div>
           <div className={classes.random_meal__img}>
-            <img src={meal.strMealThumb} alt={meal.strMeal} />
+            <Link to={`/${meal.idMeal}`}>
+              <img src={meal.strMealThumb} alt={meal.strMeal} />
+            </Link>
           </div>
         </>
       ) : (

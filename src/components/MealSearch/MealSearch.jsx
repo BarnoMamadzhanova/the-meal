@@ -31,7 +31,9 @@ function MealSearch() {
         ? searchedMeals.map((meal) => (
             <div key={meal.idMeal} className={classes.search_meal__flexbox}>
               <div className={classes.search_meal__img}>
-                <img src={meal.strMealThumb} alt={meal.strMeal} />
+                <Link to={`/${meal.idMeal}`}>
+                  <img src={meal.strMealThumb} alt={meal.strMeal} />
+                </Link>
               </div>
               <div className={classes.search_meal__info}>
                 <h3>{meal.strMeal}</h3>

@@ -12,6 +12,8 @@
   align-items: center;
   gap: 1rem;
   padding: 2rem 0;
+  max-width: 800px;
+  width: 100%;
 }
 
 .search_meal__info,
@@ -47,5 +49,6 @@
   border-radius: 0.5rem;
   box-shadow: 0.625rem 0.75rem 1.875rem -1rem rgba(0, 0, 0, 0.75);
   object-fit: cover;
-  width: 70%;
+  width: 20rem;
+  aspect-ratio: 1/1;
 }
